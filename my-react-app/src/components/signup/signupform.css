@@ -20,7 +20,7 @@
     color: #364563;
 } 
  .wrapper .input-box{
-    position: relative;
+    position: relative; 
     width: 100%;
     height: 50px;
     margin: 10px 0;
