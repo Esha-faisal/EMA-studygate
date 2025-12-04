@@ -12,12 +12,13 @@ function Home() {
       <div className="hero">
         
         <div className="hero-text">
-          <h1>Find the Best Study Abroad Opportunities</h1>
-          <p>Explore universities, scholarships, and top study destinations.</p>
+          <h1>Study Abroad Made Simple</h1>
+          <p>Explore universities, get expert advice and made your dream of study abroad a reality.</p>
 
           <div className="search-box">
-            <input type="text" placeholder="Search universities, courses, countries..." />
-            <button>Search</button>
+            {/* <input type="text" placeholder="Search universities, courses, countries..." /> */}
+            <button>Get Started</button>
+            <button>Browse Universities</button>
           </div>
         </div>
       </div>

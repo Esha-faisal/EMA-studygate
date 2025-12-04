@@ -1,41 +1,75 @@
 /* HERO SECTION */
 .hero {
-  height: 70vh;
+  height: 130vh;
+  width: 1351px;
   background: url("../../components/assets/HB.png")
     center/cover no-repeat;
   display: flex;
   align-items: center;
+  /* background-color: burlywood; */
   padding:200px 200px 0px 100px;
   
 }
 
+.hero-text {
 
+width:500px ;
+height: 400px;
+ 
+padding: 0px;
+margin-bottom: 300px;
+margin-left:-70px;
+
+
+}
 .hero-text h1 {
-  font-size: 45px;
+  font-size: 60px;
+
+  /* width: 400px; */
+  height:170px ;
+  margin-bottom: 0px;
+
   color: white;
+  padding:10px;
+  width:auto;
+  
 }
 
 .hero-text p {
-  color: #f0f0f0;
-  margin: 10px 0 20px;
+  color:white;
+   height: 60px; 
+margin-top:0px;
+  font-size: 16px;
+   text-align: left;
+   margin-bottom: 50px;
+   padding-top: 0px;
+
+
+
 }
 
 /* Search Box */
 .search-box {
   display: flex;
-  gap: 10px;
+  gap: 20px;
+ 
+  height: 50px;
+  padding: 5px;
+ 
+margin-top: -20px;
+ 
 }
-.search-box input {
-  width: 350px;
-  padding: 12px;
-  border-radius: 5px;
-  border: none;
-}
+
 .search-box button {
   padding: 12px 20px;
   background: #0077b6;
   border: none;
-  color: white;
+  
+color: white;
+  padding-top: ;
+  font-size: 15px;
+  font-style:bold ;
+  width: 170px;
   border-radius: 5px;
 }
 
