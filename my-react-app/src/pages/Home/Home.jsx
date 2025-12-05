@@ -24,7 +24,7 @@ function Home() {
 
       {/* DESTINATIONS SECTION */}
       <section className="destinations">
-        <h2>Popular Study Destinations</h2>
+        <h1>Our Services</h1>
         <div className="dest-grid">
           <div className="dest-card">USA</div>
           <div className="dest-card">Canada</div>

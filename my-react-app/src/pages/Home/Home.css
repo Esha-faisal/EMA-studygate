@@ -42,6 +42,7 @@
 /* DESTINATION SECTION */
 .destinations {
   padding: 50px;
+  text-align: center;
 }
 .dest-grid {
   display: grid;
