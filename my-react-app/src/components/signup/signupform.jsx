@@ -63,12 +63,13 @@ import { MdEmail } from "react-icons/md";
         }
 
     return (
+        <div className= 'full'>
         <div className= 'wrapper'>
            
              
             <form onSubmit={handleSubmit} noValidate>
             
-                <h1> Signup </h1>
+                <h1> Create an account </h1>
                  <div className="input-box">
                    <input type="text"  name="username" placeholder='Username' value={formvalues.username}  onChange={handlechange}/> <FaUserAlt className='icon' /> </div>
                    
@@ -95,6 +96,7 @@ import { MdEmail } from "react-icons/md";
                 </div>
 
              </form>
+        </div>
         </div>
     );
 };
