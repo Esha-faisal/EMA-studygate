@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './signupform.css';
 import { Link } from "react-router-dom";
+import bg from '../../components/assets/registerpage2.jpg';
 
 
 import { FaUserAlt } from "react-icons/fa";

@@ -35,7 +35,7 @@ nav ul li {
 /* HERO SECTION */
 .hero {
  height: 145vh;
-  width: 1257px;
+  width: 1256px;
   background: url("../../components/assets/HB.png")
     center/cover no-repeat;
   display: flex;
@@ -369,4 +369,10 @@ margin-top: -20px;
   padding: 20px;
   text-align: center;
   margin-top: 40px;
+}
+@media  (max-width:1024px ) {
+  body {
+    background-color: red;
+    z-index: 99999;
+  }
 }

@@ -1,6 +1,10 @@
 .full{
       
-    
+    width: 1500px;
+    height: 100vh;
+    background: url(../assets/registerpage2.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const footer = () => {
   return (
      <div>
-        55
+        
      </div>
   )
 }
