@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // NAVBAR SECTION
 import { Link } from "react-router-dom";
 import logo from "../../components/assets/logo.jpg";
@@ -19,28 +19,44 @@ import mailicon from '../../components/assets/mailicon.png';
 import phoneicon from '../../components/assets/phoneicon.png';
 import whitearrow from '../../components/assets/whitearrow.png';
 // FOOTER SECTION
-import footer from "../../components/footer/footer";
+import social from '../../components/assets/social.png';
+import twitter from '../../components/assets/twitter.png';
+import facebook from '../../components/assets/facebook.png';
+//other pages
+// import StudyDestinations from "../components/pages/StudyDestinations";
 
 
+ 
 
 
 
 function Home() {
+   const [menuOpen, setMenuOpen] = useState(false);  // tracks if menu is open
+   const handleToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+  
   return (
     <>
-      {/* <Navbar /> */}
+     {/* <Navbar /> */}
       <nav className='container'>
-       <img src={logo} alt="" className='logo' />
-       <ul>
-        <li>Study Destinations</li>
-        <li>Scholarship</li>
-        <li>Visa Guide</li>
+       <img src={logo} alt="logo" className='logo' />
+
+     <div className="menu-icon" onclick={handleToggle}>
+      ☰
+    </div>
+
+       
+        <ul className={menuOpen ? 'nav-links open' : 'nav-links'}>
+        {/* <li> <a href="#"></a>Home</li> */}
+         <Link to="/StudyDestnations"><button className="btn">StudyDestinations</button></Link>
+        <Link to="/scholarship"><button className="btn">Scholarship</button></Link>
+        <li> <Link to="/VisaGuide"><button className="btn">Visa Guide</button></Link> </li>
         <li><Link to="/signup"><button className='btn'>Sign Up</button></Link></li>
         <li><Link to="/login"><button className='btn'>login</button></Link></li>
         <li> <button className='btn'>Contact Us</button></li>
        </ul>
     </nav>
-  
       
       {/* HERO SECTION */}
       <div className="hero">
@@ -160,14 +176,56 @@ function Home() {
         </div>
 
       </section>
-
- 
-        <footer />
+      {/* <StudyDestinations /> */}
       
 
       {/* FOOTER */}
-      <footer className="footer">
-        <p>© 2025 EMA Study Gate. All Rights Reserved.</p>
+      <footer>
+        <div className="footer-container">
+           {/* Left Section */}
+        <div className="footer-left">
+         <img src={logo} alt="" className='logo' />
+          <p>
+            Empowering students to achieve their dreams of studying 
+            abroad with ease.
+          </p>
+          <p>
+            <br/>
+        © 2025 EMA Study Gate — All Rights Reserved
+          </p>
+        </div>
+        {/* QUICK LINKS */}
+        <div className="footer-links">
+          <h3 className="footer-title">Quick Links</h3>
+          <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Find Universities</a></li>
+          <li><a href="#">Visa Guidance</a></li>
+          <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+        {/* RESOURCES */}
+        <div className="footer-links">
+          <h3 className="footer-title">Resources</h3>
+          <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Bug</a></li>
+          <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        {/* SOCIAL-ICON */}
+        <div className="footer-social">
+          <h3 className="footer-title">Contact Us</h3>
+          
+          <ul>
+            <li><a href="#"><img src={social} alt="social" /></a> </li>
+            <li><a href="#"><img src={twitter} alt="twitter" /></a> </li>
+            <li><a href="#"><img src={facebook} alt="facebook" /></a> </li>
+          </ul>
+
+        </div>
+        
+        </div>
       </footer>
 
       

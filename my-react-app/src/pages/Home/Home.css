@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-top: 50px; /* navbar height */
+}
+
 /* NAVBAR SECTION */
 nav {
     
@@ -30,12 +39,57 @@ nav ul li {
     margin: 5px 20px;
     font-size: 15px;
 }
+/* HAMBURGER ICON */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
+/* NAV LINKS
+/* nav ul {
+  display: flex;
+} */
+/* MOBILE NAVBAR */
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #205090;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  nav ul li {
+    margin: 12px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+} 
 
 
 /* HERO SECTION */
 .hero {
- height: 145vh;
-  width: 1256px;
+  /* min-height: 100vh;
+  width: 127%; */
+ height: 145vh; 
+ width: 1256px;
+  /* overflow-x: hidden; */
+
   background: url("../../components/assets/HB.png")
     center/cover no-repeat;
   display: flex;
@@ -53,6 +107,7 @@ height: 400px;
 padding: 0px;
 margin-bottom: 300px;
 margin-left:-70px;
+ /* max-width: 520px; */
 
 
 }
@@ -66,7 +121,10 @@ margin-left:-70px;
   color: white;
   padding:10px;
   width:auto;
-  
+  /* font-size: clamp(32px, 5vw, 60px);
+  line-height: 1.2;
+  height: auto;
+   */
 }
 
 .hero-text p {
@@ -363,16 +421,241 @@ margin-top: -20px;
   margin-top: 5px;
 }
 /* FOOTER */
-.footer {
-  background: #205090;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  margin-top: 40px;
+footer {
+  width: 100%;
+  background-color: #205090;
+  color: #ffffff;
+  padding: 30px 80px;
+ 
+ 
 }
-@media  (max-width:1024px ) {
-  body {
-    background-color: red;
-    z-index: 99999;
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+/* Left Section */
+.footer-left {
+  max-width: 350px;
+}
+.footer-left img {
+  width: 160px;
+  margin-bottom: 5px;
+}
+.footer-left p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #d4d4d4;
+
+}
+
+/* Headings */
+.footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+/* Links */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.footer-links ul li a {
+  color: #d4d4d4;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+}
+
+/* SOCIAL-ICONS */
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  flex-direction: column; 
+}
+.footer-social ul {
+  display: flex;            
+  gap: 10px;                
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-social ul li a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+
+.footer-social ul li a img {
+  width: 20px;         
+  height: 20px;
+  object-fit: contain; 
+  
+}
+.footer-social a:hover {
+  background-color: #3a5fd1;
+}
+/* tablet view */
+
+@media (max-width: 992px) {
+
+  /* NAVBAR */
+  nav {
+    padding: 8px 20px;
+  }
+
+  nav ul li {
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+
+  /* HERO */
+  .hero {
+    width: 100%;
+    height: auto;
+    padding: 150px 40px;
+    background-position: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+    height: auto;
+  }
+
+  /* SERVICES & WORK */
+  .ser-card,
+  .work-card {
+    width: 45%;
+  }
+
+  /* CONTACT */
+  .contact-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-col {
+    flex-basis: 100%;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 40px 30px;
   }
 }
+
+/* mobile view */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  nav ul {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 8px 0;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 120px 20px;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  /* SERVICES & WORK */
+  .ser-card,
+  .work-card {
+    width: 100%;
+  }
+
+  /* SEARCH SECTION */
+  .search-container {
+    flex-direction: column;
+    border-radius: 15px;
+  }
+
+  .search-button {
+    padding: 15px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-social {
+    align-items: center;
+  }
+
+}
+/* small mobiles */
+@media (max-width: 480px) {
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  footer {
+    padding: 30px 15px;
+  }
+}
+
