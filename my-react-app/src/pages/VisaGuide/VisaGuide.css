@@ -1,0 +1,10 @@
+.visabanner {
+    height: 145vh; 
+    width: 1256px;
+    
+  background: url("../../components/assets/visabanner.png")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+   padding:200px 200px 0px 100px;
+}
