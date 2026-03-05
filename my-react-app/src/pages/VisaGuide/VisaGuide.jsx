@@ -1,58 +1,35 @@
-import React, { useState } from "react";
+import React from 'react'
 import './VisaGuide.css';
+import Navbar from '../../components/Navbar/Navbar';
 import studentvisatype from '../../components/assets/studentvisatype.png'
 import reqdoc from '../../components/assets/reqdoc.jpeg'
 import visaappoint from '../../components/assets/visaappoint.jpeg'
 import visaguidance from '../../components/assets/visaguidance.png';
 import Explore from '../../components/assets/Explore.png';
 import Apply from '../../components/assets/Apply.png';
-// NAVBAR SECTION
-import { Link } from "react-router-dom";
-// FOOTER SECTION
-import social from '../../components/assets/social.png';
-import twitter from '../../components/assets/twitter.png';
-import facebook from '../../components/assets/facebook.png';
-import logo from "../../components/assets/logo.jpg";
-
+// import visabanner from '../../components/assets/visabanner.png';
+import Footer from '../../components/Footer/Footer';
 
 function VisaGuide() {
-   const [menuOpen, setMenuOpen] = useState(false);  // tracks if menu is open
-   const handleToggle = () => {
-    setMenuOpen(!menuOpen);
-  };
   return (
     
       <>
-       {/* <Navbar /> */}
-      <nav className='container'>
-       <img src={logo} alt="logo" className='logo' />
-
-     <div className="menu-icon" onclick={handleToggle}>
-      ☰
-    </div>
-
-       
-        <ul className={menuOpen ? 'nav-links open' : 'nav-links'}>
-        <li> <a href="#"></a>Study Destinations</li>
-        <li> <a href="#"></a>Scholarship</li>
-        <li> <Link to="/VisaGuide"><button className="btn">Visa Guide</button></Link> </li>
-        <li><Link to="/signup"><button className='btn'>Sign Up</button></Link></li>
-        <li><Link to="/login"><button className='btn'>login</button></Link></li>
-        
-       </ul>
-    </nav>
+       <Navbar />
       
     {/* // HERO SECTION */}
-    <div className="visabanner">
-    <div className="hero-text">
-      <h1>Visa Guidance</h1>
-      <p>Navigate the visa process with our expert advice and resources</p>
-      <div className="search-box">
-        <button>Get Started</button>
-      </div>
-    </div>
-    </div>
+    <div className="visa-hero">
+  
+  <div className="visa-hero-content">
+    <h1>Visa Guidance</h1>
+    <p>Navigate the visa process with our expert advice and resources.</p>
+    <button>Get Started</button>
+  </div>
 
+  <div className="visa-hero-image">
+    {/* <img src={visabanner} alt="Visa" /> */}
+  </div>
+
+</div>
 
     {/* // GUIDANCE SECTION */}
     <section className='services'>
@@ -111,56 +88,7 @@ function VisaGuide() {
               </div>
               </section>
 
-              {/* FOOTER */}
-                    <footer>
-                      <div className="footer-container">
-                         {/* Left Section */}
-                      <div className="footer-left">
-                       <img src={logo} alt="" className='logo' />
-                        <p>
-                          Empowering students to achieve their dreams of studying 
-                          abroad with ease.
-                        </p>
-                        <p>
-                          <br/>
-                      © 2025 EMA Study Gate — All Rights Reserved
-                        </p>
-                      </div>
-                      {/* QUICK LINKS */}
-                      <div className="footer-links">
-                        <h3 className="footer-title">Quick Links</h3>
-                        <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Find Universities</a></li>
-                        <li><a href="#">Visa Guidance</a></li>
-                        <li><a href="#">Resources</a></li>
-                        </ul>
-                      </div>
-                      {/* RESOURCES */}
-                      <div className="footer-links">
-                        <h3 className="footer-title">Resources</h3>
-                        <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Bug</a></li>
-                        <li><a href="#">Support</a></li>
-                        </ul>
-                      </div>
-                      {/* SOCIAL-ICON */}
-                      <div className="footer-social">
-                        <h3 className="footer-title">Contact Us</h3>
-                        
-                        <ul>
-                          <li><a href="#"><img src={social} alt="social" /></a> </li>
-                          <li><a href="#"><img src={twitter} alt="twitter" /></a> </li>
-                          <li><a href="#"><img src={facebook} alt="facebook" /></a> </li>
-                        </ul>
-              
-                      </div>
-                      
-                      </div>
-                    </footer>
-
-
+     <Footer />
     </>
   );
 }

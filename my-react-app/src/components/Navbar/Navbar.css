@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+ overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+
+nav {
+  background: #205090;
+  color: #fff;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 1000;
+
+  padding: 8px 5%;
+  height: 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+     /* margin-top: 60px; */
+}
+
+/* Logo */
+.logo {
+  width: 160px;
+  max-width: 100%;
+}
+
+/* Links container */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  font-size: 15px;
+}
+
+/* Links */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Buttons */
+nav .btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: white;
+  color: #205090;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav .btn:hover {
+  background: #163b73;
+  color: white;
+}
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  nav {
+    padding: 8px 4%;
+  }
+
+  .logo {
+    width: 140px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav .btn {
+    width: 100%;
+  }
+
+}

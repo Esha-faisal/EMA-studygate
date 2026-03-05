@@ -1,10 +1,52 @@
-.visabanner {
-    height: 145vh; 
-    width: 1256px;
-    
-  background: url("../../components/assets/visabanner.png")
-    center/cover no-repeat;
+/* ===== Hero Banner Section ===== */
+
+.visa-hero {
+  width: 100vw;
+  min-height: 90vh;   /* makes it full screen under navbar */
   display: flex;
   align-items: center;
-   padding:200px 200px 0px 100px;
+  justify-content: space-between;
+  padding: 0 80px;
+  background: linear-gradient(135deg, #2f4f8f, #5b7bd5);
+  color: white;
+  box-sizing: border-box;
+  
+}
+
+/* Left Content */
+.visa-hero-content {
+  max-width: 550px;
+}
+
+.visa-hero-content h1 {
+  font-size: 55px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.visa-hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.visa-hero-content button {
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2f4f8f;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.visa-hero-content button:hover {
+  background-color: #1e3769;
+}
+
+/* Right Image */
+.visa-hero-image img {
+  width: 480px;
+  max-width: 100%;
 }
