@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import './VisaGuide.css';
 import Navbar from '../../components/Navbar/Navbar';
 import studentvisatype from '../../components/assets/studentvisatype.png'
@@ -22,7 +23,7 @@ function VisaGuide() {
   <div className="visa-hero-content">
     <h1>Visa Guidance</h1>
     <p>Navigate the visa process with our expert advice and resources.</p>
-    <button>Get Started</button>
+   <Link to="/get-started"> <button>Get Started</button></Link>
   </div>
 
   <div className="visa-hero-image">

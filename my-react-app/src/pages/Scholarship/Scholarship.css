@@ -2,13 +2,15 @@
 
 .scholarship-hero {
   width: 100vw;
-  min-height: 70vh;
+  min-height: 95vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: url("../../components/assets/scholarshipbanner.png") center/cover no-repeat;
   padding: 0 80px;
-  background: linear-gradient(135deg, #2f4f8f, #5b7bd5);
-  color: white;
+  margin-top: 50px;
+  /* background: linear-gradient(135deg, #2f4f8f, #5b7bd5); */
+  /* color: white; */
 }
 
 .scholarship-content {

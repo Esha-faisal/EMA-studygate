@@ -2,14 +2,16 @@
 
 .visa-hero {
   width: 100vw;
-  min-height: 90vh;   /* makes it full screen under navbar */
+  min-height: 95vh;   /* makes it full screen under navbar */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: url("../../components/assets/visaguidancebanner.png") center/cover no-repeat;
   padding: 0 80px;
-  background: linear-gradient(135deg, #2f4f8f, #5b7bd5);
-  color: white;
+  /* background: linear-gradient(135deg, #2f4f8f, #5b7bd5); */
+  /* color: white; */
   box-sizing: border-box;
+  margin-top: 50px;
   
 }
 

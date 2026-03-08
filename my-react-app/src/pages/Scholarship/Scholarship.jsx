@@ -1,5 +1,6 @@
 import React from 'react';
 import './Scholarship.css';
+import { Link } from "react-router-dom";
 import Navbar from '../../components/Navbar/Navbar';
 // import scholarshipBanner from '../../components/assets/scholarship.png';
 // import merit from '../../components/assets/merit.png';
@@ -19,7 +20,7 @@ function Scholarship() {
             Discover fully funded and partial scholarships to support your
             international education journey.
           </p>
-          <button>Explore Scholarships</button>
+         <Link to="/view-scholarship"> <button>Explore Scholarships</button> </Link>
         </div>
 
         <div className="scholarship-image">

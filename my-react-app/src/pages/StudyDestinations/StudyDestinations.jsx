@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import Navbar from '../../components/Navbar/Navbar'
 import "./StudyDestinations.css"
 import Footer from '../../components/Footer/Footer'
+import Uniicon from '../../components/assets/Uniicon.png'
 
 const StudyDestinations = () => {
   const universities = [
@@ -18,7 +20,7 @@ const StudyDestinations = () => {
       {/* header */}
       <section>
            <div className='new'>
-            <h2>Find Universities</h2>
+            <h2></h2>
             
            </div>
       </section>
@@ -29,17 +31,19 @@ const StudyDestinations = () => {
         
       <div className="container1">
         <h2 className="section-title">Top Universities</h2>
-        
+         
         <div className="university-grid">
           {universities.map((uni, index) => (
             <div key={index} className="university-card">
+              
               <div className="icon-circle">
-                <i className="fa-solid fa-building-columns"></i>
+                  <img src={Uniicon} alt="University Icon" />
+                {/* <i className="fa-solid fa-building-columns"></i> */}
               </div>
               <h3>{uni.name}</h3>
               <p className="uni-location">{uni.location}</p>
               <p className="uni-rank">Ranked {uni.rank}</p>
-              <button className="view-programs-btn">View Programs</button>
+              <Link to="/view-programs-btn"><button className="view-programs-btn">View Programs</button></Link>
             </div>
           ))}
         </div>

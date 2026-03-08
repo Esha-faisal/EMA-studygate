@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import "./Header.css";
 
+
 const Header = () => {
   return (
    <div className="hero">
@@ -17,8 +18,8 @@ const Header = () => {
     </p>
 
     <div className="search-box">
-      <button>Get Started</button>
-      <button className="secondary">Browse Universities</button>
+     <Link to="/get-started"> <button>Get Started</button></Link>
+       <Link to="/get-started"> <button className="secondary">Browse Universities</button></Link>
     </div>
   </div>
 

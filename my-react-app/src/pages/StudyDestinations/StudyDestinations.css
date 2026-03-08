@@ -5,10 +5,20 @@ body {
 }
 /* header */
 .new {
-    height: 60vh;
+    min-height: 95vh;
     width: 100vw;
-    background-color: #205090;
+    background: url("../../components/assets/unifinder.png") center/cover no-repeat;
+    /* background-color: #205090; */
+     /* box-sizing: border-box; */
+    margin-top: 50px;
+     display: flex;
+     /* padding: 0 80px; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  
+
 }
+
 /* Container and Section Spacing */
 .universities {
   padding: 60px 20px;
@@ -72,7 +82,11 @@ body {
   color: #00897b;
   font-size: 2rem;
 }
-
+.icon-circle img{
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
 /* Text Styling */
 .university-card h3 {
   font-size: 1.25rem;
