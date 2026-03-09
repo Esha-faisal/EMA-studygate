@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../components/assets/logo.jpg";
 import "./Navbar.css";
 
+
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     // <nav  className='container'>
 
@@ -27,8 +30,8 @@ const Navbar = () => {
   {/* Middle Menu */}
   <div className="nav-center">
     <Link to="/">Home</Link>
-    <Link to="/StudyDestinations">Services</Link>
-    <Link to="/scholarship">scholarship</Link>
+    <Link to="/StudyDestinations">StudyDestinations</Link>
+    <Link to="/scholarship">Scholarship</Link>
     <Link to="/VisaGuide">VisaGuide</Link>
     <Link to="/ContactUs">Contact</Link>
   </div>
@@ -40,6 +43,13 @@ const Navbar = () => {
       <button className="signup-btn">Sign Up</button>
     </Link>
   </div>
+    {/* Hamburger */}
+        <div 
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </div>
 
 </nav>
 

@@ -82,102 +82,56 @@ body {
   background:#2563eb;
 }
 
-/* nav {
-  background: #205090;
-  color: #fff;
+/* Hamburger */
 
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  z-index: 1000;
-
-  padding: 8px 5%;
-  height: 60px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-     
-} */
-
-/* Logo */
-/* .logo {
-  width: 160px;
-  max-width: 100%;
-} */
-
-/* Links container */
-/* nav ul {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.hamburger{
+  display:none;
+  font-size:26px;
+  color:white;
+  cursor:pointer;
 }
 
-nav ul li {
-  font-size: 15px;
-} */
 
-/* Links */
-/* nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-} */
+@media (max-width:992px){
 
-/* Buttons */
-/* nav .btn {
-  padding: 8px 16px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  background: white;
-  color: #205090;
-  font-weight: 600;
-  transition: 0.3s;
+.nav-center{
+  gap:20px;
 }
 
-nav .btn:hover {
-  background: #163b73;
-  color: white;
-} */
-/* ===== RESPONSIVE DESIGN ===== */
+.nav-center a{
+  font-size:14px;
+}
 
-/* Tablet */
-@media (max-width: 992px) {
-
-  nav {
-    padding: 8px 4%;
-  }
-
-  .logo {
-    width: 140px;
-  }
+.logo{
+  width:100px;
+}
 
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-  nav {
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
-    gap: 10px;
-  }
+.hamburger{
+  display:block;
+}
 
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
+.nav-center{
+  position:absolute;
+  top:70px;
+  left:0;
+  width:100%;
+  background:#205090;
 
-  nav .btn {
-    width: 100%;
-  }
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+
+  padding:20px 0;
+
+  display:none;
+}
+
+.nav-center.active{
+  display:flex;
+}
 
 }

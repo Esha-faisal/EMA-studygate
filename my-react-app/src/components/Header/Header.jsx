@@ -19,7 +19,7 @@ const Header = () => {
 
     <div className="search-box">
      <Link to="/get-started"> <button>Get Started</button></Link>
-       <Link to="/get-started"> <button className="secondary">Browse Universities</button></Link>
+       <Link to="/Browse your fav uni"> <button className="secondary">Browse Universities</button></Link>
     </div>
   </div>
 

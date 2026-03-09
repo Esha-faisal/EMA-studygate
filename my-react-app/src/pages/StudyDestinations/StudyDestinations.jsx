@@ -43,7 +43,7 @@ const StudyDestinations = () => {
               <h3>{uni.name}</h3>
               <p className="uni-location">{uni.location}</p>
               <p className="uni-rank">Ranked {uni.rank}</p>
-              <Link to="/view-programs-btn"><button className="view-programs-btn">View Programs</button></Link>
+              <Link to="/view-programs"><button className="view-programs-btn">View Programs</button></Link>
             </div>
           ))}
         </div>

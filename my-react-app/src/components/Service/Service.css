@@ -50,6 +50,15 @@
    color: #666;
    line-height: 1.4;
 }
+.card-link{
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+.ser-card{
+  cursor:pointer;
+}
+
 /* Tablet View */
 @media (max-width: 768px) {
 

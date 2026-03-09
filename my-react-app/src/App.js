@@ -9,7 +9,7 @@ import Layout from './components/layout/Layout';
 import StudyDestinations from './pages/StudyDestinations/StudyDestinations';
 import VisaGuide from './pages/VisaGuide/VisaGuide';
 import Scholarship from "./pages/Scholarship/Scholarship";
-
+import DocumentChecklist from "./pages/DocumentChecklist/DocumentChecklist";
 
 
 
@@ -30,6 +30,7 @@ function App() {
         <Route path="/StudyDestinations" element={<StudyDestinations />} />
         <Route path="/VisaGuide" element={<VisaGuide />} />
         <Route path="/Scholarship"  element={<Scholarship />} />
+        <Route path="/DocumentChecklist" element={<DocumentChecklist />} />
         
       </Routes>
       

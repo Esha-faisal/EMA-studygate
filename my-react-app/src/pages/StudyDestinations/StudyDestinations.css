@@ -5,7 +5,7 @@ body {
 }
 /* header */
 .new {
-    min-height: 95vh;
+    min-height: 75vh;
     width: 100vw;
     background: url("../../components/assets/unifinder.png") center/cover no-repeat;
     /* background-color: #205090; */
