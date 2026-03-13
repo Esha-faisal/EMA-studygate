@@ -32,6 +32,7 @@ function VisaGuide() {
 
 </div>
 
+  r
     {/* // GUIDANCE SECTION */}
     <section className='services'>
      <div> <h2>Step by Step Guide</h2>
@@ -88,8 +89,8 @@ function VisaGuide() {
 
               </div>
               </section>
+              <Footer/>
 
-     <Footer />
     </>
   );
 }

@@ -12,9 +12,13 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+<<<<<<< HEAD
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.0.2"
+=======
+    "express": "^5.2.1"
+>>>>>>> 9dd98b1b0d60dae7b40cd2b5cac44c6b421a95ce
   }
 }

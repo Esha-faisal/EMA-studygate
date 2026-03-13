@@ -20,7 +20,7 @@ const StudyDestinations = () => {
       {/* header */}
       <section>
            <div className='new'>
-            <h2></h2>
+             
             
            </div>
       </section>
@@ -51,7 +51,6 @@ const StudyDestinations = () => {
     </section>
     <Footer />
     </>
-  )
-}
+  )}
 
-export default StudyDestinations
+export default StudyDestinations;
