@@ -10,7 +10,7 @@ import StudyDestinations from './pages/StudyDestinations/StudyDestinations';
 import VisaGuide from './pages/VisaGuide/VisaGuide';
 import Scholarship from "./pages/Scholarship/Scholarship";
 import DocumentChecklist from "./pages/DocumentChecklist/DocumentChecklist";
-import Dashboardpage from './pages/Dashboard/Dashboardpage';
+
 
 
 
@@ -32,7 +32,6 @@ function App() {
         {/* <Route path="/Home" element={<Home />} /> */}
         <Route path="/signup" element={<Signupform />} />
         <Route path="/login" element={<Loginform />} />
-        <Route path="/Dashboardpage" element={<Dashboardpage />} />
         <Route path="/VisaGuide" element={<VisaGuide />} />
         <Route path="/StudyDestinations" element={<StudyDestinations />} />
         <Route path="/Scholarship"  element={<Scholarship />} />
