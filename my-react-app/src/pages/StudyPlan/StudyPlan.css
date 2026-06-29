@@ -1,0 +1,194 @@
+/* =============================
+   StudyPlan.css
+   ============================= */
+.sp-root { 
+      display:flex; 
+      flex-direction:column;
+       min-height:100vh; 
+       width: 100vw;
+       background:#f0f4fb; 
+       font-family:'Segoe UI',Tahoma,sans-serif; 
+    }
+.sp-body { 
+  display:flex; 
+  flex:1;
+  }
+.sp-main { 
+  flex:1;
+  padding:32px 40px 60px; 
+  overflow-y:auto;
+  
+  width:100vw; }
+
+/* Header */
+.sp-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:28px; gap:16px; flex-wrap:wrap; }
+.sp-header__title { font-size:28px; font-weight:800; color:#1a3a6b; margin:0 0 4px; }
+.sp-header__sub   { font-size:14px; color:#6b8ab5; margin:0; }
+
+/* Progress */
+.sp-progress { background:#fff; border-radius:14px; padding:20px 24px; margin-bottom:28px; box-shadow:0 1px 8px rgba(26,58,107,0.08); }
+.sp-progress__bar { height:6px; background:#e2e9f5; border-radius:99px; margin-bottom:20px; overflow:hidden; }
+.sp-progress__fill { height:100%; background:linear-gradient(90deg,#2d5fa6,#4a86d4); border-radius:99px; transition:width 0.4s ease; }
+.sp-progress__steps { display:flex; justify-content:space-between; }
+.sp-progress__step { display:flex; flex-direction:column; align-items:center; gap:6px; flex:1; }
+.sp-progress__step-dot {
+  width:32px; height:32px; border-radius:50%; border:2.5px solid #d0dff0;
+  background:#fff; display:flex; align-items:center; justify-content:center;
+  font-size:13px; font-weight:700; color:#9ab3d4; transition:all 0.2s;
+}
+.sp-progress__step--done  .sp-progress__step-dot { background:#27ae60; border-color:#27ae60; color:#fff; }
+.sp-progress__step--active .sp-progress__step-dot { background:linear-gradient(135deg,#2d5fa6,#4a86d4); border-color:#4a86d4; color:#fff; box-shadow:0 0 0 4px rgba(74,134,212,0.2); }
+.sp-progress__step-label { font-size:11.5px; color:#7a99c2; font-weight:500; text-align:center; }
+.sp-progress__step--active .sp-progress__step-label { color:#2d5fa6; font-weight:700; }
+.sp-progress__step--done   .sp-progress__step-label { color:#27ae60; }
+
+/* Card */
+.sp-card {
+  background:#fff; border-radius:18px; padding:32px;
+  box-shadow:0 2px 16px rgba(26,58,107,0.1);
+}
+.sp-card--anim { animation:spIn 0.25s ease; }
+@keyframes spIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+
+.sp-card__icon-header { font-size:38px; margin-bottom:12px; }
+.sp-card__title { font-size:22px; font-weight:800; color:#1a3a6b; margin:0 0 6px; }
+.sp-card__sub   { font-size:14px; color:#6b8ab5; margin:0 0 28px; }
+
+/* Form */
+.sp-form { display:flex; flex-direction:column; gap:20px; }
+.sp-grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+
+.sp-field { display:flex; flex-direction:column; gap:6px; }
+.sp-field label { font-size:12.5px; font-weight:600; color:#4a6080; }
+.sp-field input,
+.sp-field select {
+  border:1.5px solid #d8e4f5; border-radius:9px; padding:10px 13px;
+  font-size:14px; color:#1a3a6b; background:#f7faff; font-family:inherit; outline:none;
+  transition:border-color 0.2s, box-shadow 0.2s;
+}
+.sp-field input:focus,
+.sp-field select:focus { border-color:#4a86d4; box-shadow:0 0 0 3px rgba(74,134,212,0.1); background:#fff; }
+.sp-field__hint { font-size:11px; color:#9ab3d4; }
+
+/* Radio group */
+.sp-radio-group { display:flex; gap:10px; flex-wrap:wrap; }
+.sp-radio {
+  display:flex; align-items:center; gap:8px;
+  padding:9px 18px; border-radius:9px; border:1.5px solid #d0dff0;
+  background:#fff; cursor:pointer; font-size:13.5px; color:#4a6080;
+  font-weight:500; transition:all 0.15s;
+}
+.sp-radio input { display:none; }
+.sp-radio:hover { border-color:#4a86d4; color:#2d5fa6; }
+.sp-radio--active { background:linear-gradient(135deg,#2d5fa6,#4a86d4); border-color:transparent; color:#fff; font-weight:600; }
+
+/* Country grid */
+.sp-country-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.sp-country-btn {
+  padding:12px; border-radius:10px; border:1.5px solid #d0dff0;
+  background:#fff; cursor:pointer; font-size:13px; font-weight:500;
+  color:#4a6080; transition:all 0.15s; font-family:inherit;
+  display:flex; align-items:center; justify-content:center; gap:6px;
+}
+.sp-country-btn:hover { border-color:#4a86d4; color:#2d5fa6; }
+.sp-country-btn--active { background:linear-gradient(135deg,#2d5fa6,#4a86d4); border-color:transparent; color:#fff; font-weight:600; }
+
+/* Card footer */
+.sp-card__footer { display:flex; gap:12px; justify-content:flex-end; margin-top:28px; padding-top:20px; border-top:2px solid #f0f4f9; }
+
+/* Buttons */
+.sp-btn { padding:10px 22px; border-radius:9px; font-size:13.5px; font-weight:600; cursor:pointer; border:none; font-family:inherit; transition:transform 0.15s, box-shadow 0.15s; display:inline-flex; align-items:center; gap:6px; }
+.sp-btn:hover:not(:disabled) { transform:translateY(-1px); }
+.sp-btn--primary  { background:linear-gradient(135deg,#2d5fa6,#4a86d4); color:#fff; box-shadow:0 3px 12px rgba(45,95,166,0.25); }
+.sp-btn--outline  { background:#fff; color:#2d5fa6; border:1.5px solid #c0d4f0; }
+.sp-btn--ghost    { background:#f0f4fb; color:#4a6fa5; }
+.sp-btn--generate { background:linear-gradient(135deg,#7b2ff7,#4a86d4); color:#fff; box-shadow:0 3px 14px rgba(123,47,247,0.3); padding:12px 28px; font-size:15px; }
+.sp-btn--sm       { padding:7px 14px; font-size:12.5px; background:#eef4ff; color:#2d5fa6; border:1.5px solid #c5d8f8; }
+.sp-btn--mt       { margin-top:16px; }
+.sp-btn:disabled  { opacity:0.7; cursor:not-allowed; transform:none; }
+
+/* Spinner */
+.sp-spinner {
+  width:16px; height:16px; border:2px solid rgba(255,255,255,0.4);
+  border-top-color:#fff; border-radius:50%;
+  animation:spin 0.7s linear infinite; display:inline-block;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+
+/* ── GENERATED PLAN ── */
+.sp-plan { display:flex; flex-direction:column; gap:24px; }
+
+.sp-plan__hero {
+  background:linear-gradient(135deg,#1a3a6b,#2d5fa6);
+  border-radius:18px; padding:28px;
+  display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+}
+.sp-plan__hero-left { display:flex; align-items:center; gap:16px; }
+.sp-plan__hero-icon { font-size:40px; }
+.sp-plan__hero-title { font-size:20px; font-weight:800; color:#fff; margin:0 0 4px; }
+.sp-plan__hero-sub   { font-size:13px; color:rgba(255,255,255,0.75); margin:0; }
+.sp-plan__hero-actions { display:flex; gap:10px; flex-wrap:wrap; }
+
+/* Section */
+.sp-section { background:#fff; border-radius:16px; padding:24px; box-shadow:0 1px 8px rgba(26,58,107,0.08); }
+.sp-section__title { font-size:16px; font-weight:700; color:#1a3a6b; margin:0 0 18px; }
+
+/* University cards */
+.sp-uni-list { display:flex; flex-direction:column; gap:12px; }
+.sp-uni-card {
+  display:flex; align-items:center; gap:16px;
+  border:1.5px solid #e8edf8; border-radius:12px; padding:16px 18px;
+  position:relative; overflow:hidden; transition:box-shadow 0.15s;
+}
+.sp-uni-card:hover { box-shadow:0 3px 12px rgba(26,58,107,0.1); }
+.sp-uni-card__match-bar { position:absolute; top:0; left:0; right:0; height:3px; background:#e2e9f5; }
+.sp-uni-card__match-fill { height:100%; background:linear-gradient(90deg,#27ae60,#4a86d4); transition:width 0.6s ease; }
+.sp-uni-card__info { flex:1; }
+.sp-uni-card__top   { display:flex; align-items:center; gap:10px; margin-bottom:3px; }
+.sp-uni-card__name  { font-size:14px; font-weight:700; color:#1a3a6b; margin:0; }
+.sp-uni-card__match-badge { font-size:11px; font-weight:700; background:#e8f8ef; color:#1a7a3a; padding:2px 9px; border-radius:99px; }
+.sp-uni-card__country { font-size:12.5px; color:#7a99c2; margin:0 0 4px; }
+.sp-uni-card__reason  { font-size:12.5px; color:#5a7a9a; margin:0 0 6px; }
+.sp-uni-card__stats   { display:flex; gap:14px; font-size:12px; color:#9ab3d4; }
+
+/* Scholarships */
+.sp-scholarship-list { display:flex; flex-direction:column; gap:10px; }
+.sp-scholarship-card {
+  display:flex; align-items:center; justify-content:space-between;
+  background:#f7faff; border-radius:10px; padding:14px 18px; gap:16px; flex-wrap:wrap;
+  border:1.5px solid #dde8f5;
+}
+.sp-scholarship-card__name   { font-size:14px; font-weight:700; color:#1a3a6b; margin:0 0 3px; }
+.sp-scholarship-card__amount { font-size:13px; color:#27ae60; font-weight:600; margin:0; }
+.sp-scholarship-card__right  { display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
+.sp-scholarship-card__match  { font-size:12px; font-weight:700; background:#e8f8ef; color:#1a7a3a; padding:2px 9px; border-radius:99px; }
+.sp-scholarship-card__deadline { font-size:12px; color:#e74c3c; font-weight:500; }
+
+/* Timeline */
+.sp-timeline { display:flex; flex-direction:column; gap:0; }
+.sp-timeline-item { display:flex; gap:16px; position:relative; padding-bottom:20px; }
+.sp-timeline-item__dot { width:14px; height:14px; border-radius:50%; background:linear-gradient(135deg,#2d5fa6,#4a86d4); flex-shrink:0; margin-top:3px; }
+.sp-timeline-item__line { position:absolute; left:6px; top:17px; width:2px; height:100%; background:linear-gradient(to bottom,#c5d8f8,transparent); }
+.sp-timeline-item__content { flex:1; }
+.sp-timeline-item__month { font-size:11px; font-weight:700; color:#4a86d4; text-transform:uppercase; letter-spacing:0.5px; display:block; margin-bottom:3px; }
+.sp-timeline-item__task  { font-size:13.5px; color:#1a3a6b; margin:0; line-height:1.5; }
+
+/* Docs grid */
+.sp-docs-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.sp-doc-item {
+  display:flex; align-items:center; gap:10px;
+  background:#f7faff; border:1.5px solid #dde8f5; border-radius:9px; padding:11px 14px;
+}
+.sp-doc-item__icon   { font-size:16px; flex-shrink:0; }
+.sp-doc-item__name   { flex:1; font-size:13px; font-weight:500; color:#1a3a6b; }
+.sp-doc-item__status { font-size:11px; color:#f39c12; font-weight:600; background:#fef5e7; padding:2px 8px; border-radius:99px; white-space:nowrap; }
+
+/* Responsive */
+@media(max-width:768px) {
+  .sp-main { padding:20px 16px 40px; max-width:100%; }
+  .sp-grid-2 { grid-template-columns:1fr; }
+  .sp-country-grid { grid-template-columns:repeat(2,1fr); }
+  .sp-docs-grid { grid-template-columns:1fr; }
+  .sp-progress__steps { gap:4px; }
+  .sp-progress__step-label { font-size:9px; }
+}

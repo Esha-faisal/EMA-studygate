@@ -1,0 +1,175 @@
+/* AdminLogin.css */
+.al-root {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(145deg, #0a1f4e 0%, #1a3a6b 50%, #2d5fa6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  padding: 20px;
+}
+
+.al-bg { position: absolute; inset: 0; pointer-events: none; }
+.al-bg__circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.al-bg__circle--1 { width: 400px; height: 400px; top: -100px; right: -100px; }
+.al-bg__circle--2 { width: 250px; height: 250px; bottom: -60px; left: -60px; }
+.al-bg__circle--3 { width: 180px; height: 180px; top: 40%; left: 10%; }
+
+.al-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+  animation: alIn 0.3s ease;
+}
+
+@keyframes alIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+.al-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1.5px solid #f0f4f9;
+}
+
+.al-logo__icon {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, #1a3a6b, #2d5fa6);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoadmin {
+  width: 60px;
+  height: 46px
+}
+
+.al-logo__name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a3a6b;
+  margin: 0 0 2px;
+}
+
+.al-logo__tag {
+  font-size: 10.5px;
+  background: #eef4ff;
+  color: #2d5fa6;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-weight: 600;
+}
+
+.al-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a3a6b;
+  margin: 0 0 6px;
+}
+
+.al-sub {
+  font-size: 14px;
+  color: #6b8ab5;
+  margin: 0 0 28px;
+}
+
+.al-form { display: flex; flex-direction: column; gap: 16px; }
+
+.al-field { display: flex; flex-direction: column; gap: 6px; }
+.al-field label { font-size: 12.5px; font-weight: 600; color: #4a6080; }
+
+.al-input {
+  border: 1.5px solid #d8e4f5;
+  border-radius: 9px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #1a3a6b;
+  background: #f7faff;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.al-input:focus {
+  border-color: #4a86d4;
+  box-shadow: 0 0 0 3px rgba(74,134,212,0.1);
+  background: #fff;
+}
+
+.al-input--error { border-color: #e74c3c !important; }
+.al-error { font-size: 12px; color: #e74c3c; }
+
+.al-btn {
+  background: linear-gradient(135deg, #1a3a6b, #2d5fa6);
+  color: #fff;
+  border: none;
+  padding: 13px;
+  border-radius: 9px;
+  font-size: 14.5px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.al-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 18px rgba(26,58,107,0.35);
+}
+
+.al-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.al-spinner {
+  width: 14px; height: 14px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.al-back {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.al-back a {
+  font-size: 13px;
+  color: #4a86d4;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.al-back a:hover { text-decoration: underline; }
+
+.al-secure {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 11.5px;
+  color: #9ab3d4;
+  padding-top: 16px;
+  border-top: 1px solid #f0f4f9;
+}

@@ -1,11 +1,21 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../components/assets/logo.jpg";
 import "./Navbar.css";
 
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
+
+  const token = localStorage.getItem("token");
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("studentEmail");
+    navigate("/");
+  };
 
   return (
     // <nav  className='container'>
@@ -36,13 +46,36 @@ const Navbar = () => {
     <Link to="/ContactUs">Contact</Link>
   </div>
 
-  {/* Right Side */}
-  <div className="nav-right">
-    <Link to="/login" className="login">Login</Link>
-    <Link to="/signup">
-      <button className="signup-btn">Sign Up</button>
-    </Link>
-  </div>
+ <div className="nav-right">
+
+  {token ? (
+    <>
+      <Link to="/dashboard" className="login">
+        Dashboard
+      </Link>
+
+      <button
+        className="signup-btn"
+        onClick={logout}
+      >
+        Logout
+      </button>
+    </>
+  ) : (
+    <>
+      <Link to="/login" className="login">
+        Login
+      </Link>
+
+      <Link to="/signup">
+        <button className="signup-btn">
+          Sign Up
+        </button>
+      </Link>
+    </>
+  )}
+
+</div>
     {/* Hamburger */}
         <div 
         className="hamburger"

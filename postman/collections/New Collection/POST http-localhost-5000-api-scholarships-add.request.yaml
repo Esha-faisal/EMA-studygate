@@ -1,0 +1,28 @@
+$kind: http-request
+name: POST http://localhost:5000/api/scholarships/add
+url: 'http://localhost:5000/api/scholarships/add'
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "name": "DAAD Scholarship",
+      "country": "Germany",
+      "flag": "🇩🇪",
+      "amount": "10000 USD",
+      "deadline": "2026-01-15",
+      "type": "Fully Funded",
+      "level": "Masters",
+      "tag": "International",
+      "eligibility": "Min GPA 3.0, IELTS 6.5",
+      "link": "https://www.daad.de",
+      "levels": {
+        "bachelor": false,
+        "master": true,
+        "phd": false,
+        "postgrad": false
+      }
+    }
+order: 1778296853008

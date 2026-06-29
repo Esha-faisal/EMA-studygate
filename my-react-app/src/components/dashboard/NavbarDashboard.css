@@ -1,0 +1,196 @@
+/* =============================
+   NavbarDashboard.css
+   ============================= */
+
+.dash-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #205090 0%, #2d5fa6 100%);
+  padding: 0 32px;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 16px rgba(26, 58, 107, 0.25);
+  
+  
+}
+.logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+}
+
+.brand-text{
+    display:flex;
+    align-items:baseline;
+    gap:4px;
+    font-family:'Poppins',sans-serif;
+    font-weight:700;
+}
+
+.brand-ema{
+    color:#ffffff;
+    font-size:28px;
+}
+
+.brand-studygate{
+    color:#8ec5ff;
+    font-size:28px;
+}
+
+/* Brand */
+.dash-navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.dash-navbar__logo-icon {
+  width: 30px;
+  height: 30px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-navbar__brand-name {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+/* Nav links */
+.dash-navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.dash-navbar__link {
+  color: rgba(255,255,255,0.88);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.dash-navbar__link:hover {
+  color: #fff;
+}
+
+/* User area */
+.dash-navbar__user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+  padding: 6px 12px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.12);
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.dash-navbar__user:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.dash-navbar__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.5);
+}
+
+.dash-navbar__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dash-navbar__username {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Dropdown */
+.dash-navbar__dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(26,58,107,0.18);
+  min-width: 180px;
+  padding: 6px 0;
+  z-index: 2000;
+  animation: fadeDown 0.15s ease;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dash-navbar__dropdown-item {
+  display: block;
+  padding: 10px 18px;
+  color: #1a3a6b;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.dash-navbar__dropdown-item:hover {
+  background: #f0f5ff;
+}
+
+.dash-navbar__dropdown-item--danger {
+  color: #e03e3e;
+}
+
+.dash-navbar__dropdown-item--danger:hover {
+  background: #fff5f5;
+}
+
+.dash-navbar__dropdown-divider {
+  height: 1px;
+  background: #e8edf5;
+  margin: 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dash-navbar__links {
+    display: none;
+  }
+
+  .dash-navbar {
+    padding: 0 16px;
+  }
+}

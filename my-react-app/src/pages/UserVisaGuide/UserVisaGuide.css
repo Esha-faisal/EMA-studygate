@@ -1,0 +1,159 @@
+/* ===========================
+   VisaGuide.css
+   =========================== */
+.vg-root { 
+    display:flex; 
+    flex-direction:column; 
+    min-height:100vh;
+    width: 100vw;
+    background:#f0f4fb;
+    font-family:'Segoe UI',
+    Tahoma,sans-serif; 
+   }
+
+.vg-body { display:flex; flex:1; }
+.vg-main { flex:1; padding:32px 40px 60px; overflow-y:auto; }
+
+/* Header */
+.vg-header { margin-bottom:24px; }
+.vg-header__title { font-size:28px; font-weight:800; color:#1a3a6b; margin:0 0 4px; }
+.vg-header__sub   { font-size:14px; color:#6b8ab5; margin:0; }
+
+/* Two-column layout */
+.vg-layout { display:flex; gap:24px; align-items:flex-start; }
+
+/* Country Sidebar */
+.vg-sidebar {
+  width: 230px;
+  flex-shrink:0;
+  background:#fff;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 1px 8px rgba(26,58,107,0.08);
+  position:sticky;
+  top:96px;
+}
+
+.vg-sidebar__search {
+  display:flex; align-items:center; gap:8px;
+  background:#f7faff; border:1.5px solid #dde8f5;
+  border-radius:8px; padding:8px 12px; margin-bottom:12px;
+}
+.vg-sidebar__search input { border:none; outline:none; font-size:13px; color:#1a3a6b; background:transparent; width:100%; font-family:inherit; }
+.vg-sidebar__search input::placeholder { color:#9ab3d4; }
+
+.vg-country-list { display:flex; flex-direction:column; gap:4px; }
+
+.vg-country-btn {
+  display:flex; align-items:center; gap:10px;
+  padding:11px 12px; border-radius:10px; border:none;
+  background:transparent; cursor:pointer; text-align:left;
+  transition:background 0.15s; width:100%; font-family:inherit;
+}
+.vg-country-btn:hover { background:#f0f4fb; }
+.vg-country-btn--active { background:linear-gradient(135deg,#2d5fa6,#4a86d4); }
+.vg-country-btn--active .vg-country-btn__name { color:#fff; }
+.vg-country-btn--active .vg-country-btn__visa { color:rgba(255,255,255,0.75); }
+
+.vg-country-btn__flag { font-size:22px; flex-shrink:0; }
+.vg-country-btn__name { font-size:13.5px; font-weight:700; color:#1a3a6b; margin:0 0 2px; }
+.vg-country-btn__visa { font-size:11px; color:#7a99c2; margin:0; }
+
+/* Content */
+.vg-content { flex:1; min-width:0; display:flex; flex-direction:column; gap:20px; }
+
+/* Hero */
+.vg-hero {
+  border-radius:16px; padding:24px 28px;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:20px; flex-wrap:wrap;
+  color:#fff;
+}
+.vg-hero--red    { background:linear-gradient(135deg,#c0392b,#e74c3c); }
+.vg-hero--blue   { background:linear-gradient(135deg,#1a3a6b,#2d5fa6); }
+.vg-hero--green  { background:linear-gradient(135deg,#1a7a3a,#27ae60); }
+.vg-hero--yellow { background:linear-gradient(135deg,#7d4e00,#d4820a); }
+
+.vg-hero__left { display:flex; align-items:center; gap:16px; }
+.vg-hero__flag { font-size:42px; }
+.vg-hero__name { font-size:22px; font-weight:800; margin:0 0 4px; }
+.vg-hero__visa { font-size:13px; opacity:0.85; margin:0; }
+
+.vg-hero__stats { display:flex; gap:24px; flex-wrap:wrap; }
+.vg-hero__stat  { text-align:center; }
+.vg-hero__stat-val   { font-size:16px; font-weight:800; margin:0 0 3px; }
+.vg-hero__stat-label { font-size:11px; opacity:0.8; margin:0; }
+
+/* Tabs */
+.vg-tabs { display:flex; gap:4px; background:#fff; border-radius:12px; padding:6px; box-shadow:0 1px 6px rgba(26,58,107,0.08); }
+.vg-tab { flex:1; padding:9px 14px; border:none; border-radius:8px; background:transparent; color:#6b8ab5; font-size:13px; font-weight:500; cursor:pointer; transition:all 0.15s; font-family:inherit; }
+.vg-tab:hover { background:#f0f4fb; color:#1a3a6b; }
+.vg-tab--active { background:linear-gradient(135deg,#2d5fa6,#4a86d4); color:#fff; font-weight:600; }
+
+/* Steps */
+.vg-steps { background:#fff; border-radius:16px; padding:24px 28px; box-shadow:0 1px 8px rgba(26,58,107,0.08); }
+
+.vg-step { display:flex; gap:16px; margin-bottom:8px; position:relative; }
+
+.vg-step__num {
+  width:36px; height:36px; border-radius:50%; flex-shrink:0;
+  background:linear-gradient(135deg,#2d5fa6,#4a86d4);
+  color:#fff; font-size:14px; font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; z-index:1;
+}
+
+.vg-step__line {
+  position:absolute; left:17px; top:36px;
+  width:2px; height:calc(100% + 8px);
+  background:linear-gradient(to bottom,#c5d8f8,transparent);
+}
+
+.vg-step__content { flex:1; padding-bottom:24px; }
+.vg-step__title { font-size:14px; font-weight:700; color:#1a3a6b; margin:0 0 5px; padding-top:6px; }
+.vg-step__desc  { font-size:13px; color:#5a7a9a; margin:0; line-height:1.6; }
+
+/* Documents */
+.vg-documents { background:#fff; border-radius:16px; padding:24px 28px; box-shadow:0 1px 8px rgba(26,58,107,0.08); }
+.vg-documents__intro { font-size:13.5px; color:#4a6080; margin:0 0 18px; line-height:1.6; }
+.vg-doc-list { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px; }
+
+.vg-doc-item {
+  display:flex; align-items:center; gap:10px;
+  background:#f7faff; border:1.5px solid #dde8f5; border-radius:9px;
+  padding:11px 14px; transition:border-color 0.15s;
+}
+.vg-doc-item:hover { border-color:#4a86d4; }
+.vg-doc-item__icon { font-size:16px; flex-shrink:0; }
+.vg-doc-item__text { font-size:13px; color:#1a3a6b; font-weight:500; line-height:1.4; }
+
+.vg-documents__note {
+  background:#fff8e6; border:1px solid #fde8a0; border-radius:10px;
+  padding:12px 16px; font-size:13px; color:#7a5a00; line-height:1.5;
+}
+
+/* Tips */
+.vg-tips { display:flex; flex-direction:column; gap:12px; }
+
+.vg-tip-card {
+  background:#fff; border-radius:12px; padding:18px 20px;
+  box-shadow:0 1px 8px rgba(26,58,107,0.08);
+  display:flex; gap:14px; align-items:flex-start;
+  border-left:4px solid #4a86d4;
+}
+.vg-tip-card--info { border-left-color:#27ae60; background:#f0fff6; }
+.vg-tip-card__num  { font-size:15px; flex-shrink:0; padding-top:1px; }
+.vg-tip-card__text { font-size:13.5px; color:#3a5a8a; margin:0; line-height:1.6; }
+.vg-tip-card__text strong { color:#1a3a6b; }
+
+/* Responsive */
+@media(max-width:900px) {
+  .vg-layout  { flex-direction:column; }
+  .vg-sidebar { width:100%; position:static; }
+  .vg-doc-list { grid-template-columns:1fr; }
+}
+@media(max-width:768px) {
+  .vg-main  { padding:20px 16px 40px; }
+  .vg-hero  { flex-direction:column; align-items:flex-start; }
+  .vg-tabs  { flex-direction:column; }
+}

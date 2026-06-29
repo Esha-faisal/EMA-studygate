@@ -1,0 +1,266 @@
+/* =============================
+   IntroPage.css
+   ============================= */
+
+/* ── Root ── */
+.intro-root {
+  min-height: 100vh;
+  /* width: 100%; */
+  width: 100vw;
+  background: linear-gradient(145deg, #0a1f4e 0%, #153a7a 40%, #1f5299 70%, #0d2d6b 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.6s ease;
+}
+
+.logos 
+{
+width: 52;
+height: 42;
+}
+
+.intro-root--fadeout {
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* ── Background particles ── */
+.intro-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.intro-particle {
+  position: absolute;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  bottom: -20px;
+  animation: particleRise linear infinite;
+}
+
+@keyframes particleRise {
+  0%   { transform: translateY(0) scale(1);    opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.6; }
+  100% { transform: translateY(-110vh) scale(0.5); opacity: 0; }
+}
+
+/* ── Center content ── */
+.intro-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ── Logo ── */
+.intro-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.intro-logo-wrap--visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.intro-logo-icon {
+  width: 90px;
+  height: 90px;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+  animation: logoPulse 3s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% { box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 0 rgba(255,255,255,0.1); }
+  50%       { box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 16px rgba(255,255,255,0); }
+}
+
+.intro-logo-text {
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -0.5px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.intro-logo-text--ema {
+  color: #7eb8f7;
+}
+
+.intro-logo-text--rest {
+  color: #ffffff;
+}
+
+/* ── Tagline ── */
+.intro-tagline {
+  font-size: 17px;
+  color: rgba(255,255,255,0.82);
+  max-width: 460px;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+}
+
+.intro-tagline--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Features pills ── */
+.intro-features {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+}
+
+.intro-features--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-feature-pill {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 99px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  animation: pillFadeIn 0.4s ease forwards;
+  opacity: 0;
+}
+
+@keyframes pillFadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Progress bar ── */
+.intro-progress-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.intro-progress-wrap--visible {
+  opacity: 1;
+}
+
+.intro-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.intro-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7eb8f7, #ffffff);
+  border-radius: 99px;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 8px rgba(126,184,247,0.6);
+}
+
+.intro-loading-text {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* ── Skip button ── */
+.intro-skip {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.7);
+  font-size: 13px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  transition: all 0.2s;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s, background 0.2s, color 0.2s;
+}
+
+.intro-skip--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-skip:hover {
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+}
+
+/* ── Bottom strip ── */
+.intro-bottom {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+  z-index: 1;
+}
+
+.intro-bottom--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-bottom p {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.45);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  letter-spacing: 0.3px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 576px) {
+  .intro-logo-text   { font-size: 28px; }
+  .intro-tagline     { font-size: 15px; }
+  .intro-logo-icon   { width: 74px; height: 74px; }
+  .intro-progress-wrap { width: 240px; }
+  .intro-features    { gap: 8px; }
+  .intro-feature-pill { font-size: 12px; padding: 6px 13px; }
+}
